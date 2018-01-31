@@ -2,13 +2,15 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+	android:background="@color/darkblue">
 
 	<ScrollView
 		android:layout_width="match_parent"
 		android:layout_height="match_parent">
 
 		<LinearLayout
+			android:gravity="center"
 			android:orientation="vertical"
 			android:layout_width="match_parent"
 			android:layout_height="match_parent">
@@ -99,14 +101,75 @@
 						android:layout_height="wrap_content"
 						android:text="색상 설정"/>
 
-					<CheckBox
-						android:text="Black모드 사용"
-						android:id="@+id/mode"
+					<LinearLayout
 						android:layout_width="match_parent"
-						android:layout_height="wrap_content"
+						android:layout_height="wrap_content">
+
+						<Button
+							android:onClick="setwhite"
+							android:layout_margin="3dp"
+							android:layout_weight="1"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:background="@color/white"/>
+
+						<Button
+							android:onClick="setblack"
+							android:layout_margin="3dp"
+							android:layout_weight="1"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:background="@color/black"/>
+
+						<Button
+							android:onClick="setpink"
+							android:layout_margin="3dp"
+							android:layout_weight="1"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:background="@color/pink"/>
+
+						<Button
+							android:onClick="setred"
+							android:layout_margin="3dp"
+							android:layout_weight="1"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:background="@color/red"/>
+
+						<Button
+							android:onClick="setorange"
+							android:layout_margin="3dp"
+							android:layout_weight="1"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:background="@color/orange"/>
+
+						<Button
+							android:onClick="setgreen"
+							android:layout_margin="3dp"
+							android:layout_weight="1"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:background="@color/green"/>
+
+						<Button
+							android:onClick="setbluegreen"
+							android:layout_margin="3dp"
+							android:layout_weight="1"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:background="@color/bluegreen"/>
+
+					</LinearLayout>
+
+					<TextView
 						android:layout_marginTop="5dp"
 						android:layout_marginLeft="5dp"
-						android:layout_marginRight="5dp"/>
+						android:layout_marginRight="5dp"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:text="블랙이외의 색상 선택시 시계글자색(문구제외)은 WHITE입니다"/>
 
 				</LinearLayout>
 
@@ -149,12 +212,14 @@
 			</android.support.v7.widget.CardView>
 
 			<Button
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
+				android:layout_width="140dp"
+				android:layout_height="40dp"
 				android:layout_marginTop="5dp"
 				android:layout_marginLeft="5dp"
 				android:layout_marginRight="5dp"
 				android:text="적용하기"
+				android:textColor="@color/darkblue"
+				android:background="@color/white"
 				android:onClick="save"/>
 
 

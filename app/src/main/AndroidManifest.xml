@@ -10,34 +10,61 @@
         android:label="HangulClock"
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
-
-        <activity android:name=".MainActivity">
-
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
+        <activity android:name=".SettingActivity" />
+        <activity android:name=".HelpActivity" />
 
-        <activity
-            android:name=".SettingActivity"></activity>
-
-        <activity
-            android:name=".HelpActivity"></activity>
-
-        <receiver android:name=".NewAppWidget">
+        <receiver
+            android:name=".bigsizefull"
+            android:label="4X4 BIG">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
 
             <meta-data
                 android:name="android.appwidget.provider"
-                android:resource="@xml/new_app_widget_info" />
+                android:resource="@xml/bigsizefull_info" />
         </receiver>
+        <receiver
+            android:name=".bigsizesmall"
+            android:label="4X4 SMALL">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
 
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/bigsizesmall_info" />
+        </receiver>
+        <receiver android:name=".bigsizemid"
+            android:label="4X4 MID">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/bigsizemid_info" />
+        </receiver>
+        <receiver android:name=".midsize"
+            android:label="3X3 BIG">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/midsize_info" />
+        </receiver>
     </application>
 
 </manifest>
