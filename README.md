@@ -22,6 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>
 *새로운 "이스터에그"추가(찾아보시길.. ㅎ)
 *간단히 날씨를 알아 볼 수 있는 기능 추가
 *환경설정 디자인 바꾸기..(못생겼어..)
+*잠금화면, AOD추가
 
 # 작동버전
 *Android 4.4(KitKat)+
